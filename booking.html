@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking – Community Wellbeing Hub</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+  <body>
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav-brand"><span class="brand-name">Community Wellbeing Hub</span></div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html"    class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="events.html"   class="nav-link">Events</a></li>
+          <li><a href="booking.html"  class="nav-link active" aria-current="page">Booking</a></li>
+          <li><a href="contact.html"  class="nav-link">Contact</a></li>
+          <li><a href="news.html"     class="nav-link">News</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="mainContent">
+      <section class="page-section">
+        <div class="container">
+          <div class="page-header">
+            <h1>Book an Appointment</h1>
+            <p>Schedule a service or register for an event</p>
+          </div>
+
+          <!-- ═══ WIZARD PROGRESS BAR ═══ -->
+          <div class="wizard-progress" aria-label="Booking progress">
+            <div class="wizard-step-item active" id="prog-1">
+              <div class="wizard-bubble">1</div>
+              <span class="wizard-step-label">Your Details</span>
+            </div>
+            <div class="wizard-connector"></div>
+            <div class="wizard-step-item" id="prog-2">
+              <div class="wizard-bubble">2</div>
+              <span class="wizard-step-label">Appointment</span>
+            </div>
+            <div class="wizard-connector"></div>
+            <div class="wizard-step-item" id="prog-3">
+              <div class="wizard-bubble">3</div>
+              <span class="wizard-step-label">Confirm</span>
+            </div>
+          </div>
+
+          <div class="form-container">
+            <form id="bookingForm" novalidate>
+
+              <!-- ═══ STEP 1 — Personal Details ═══ -->
+              <div class="wizard-panel active" id="step-1" aria-labelledby="step1-heading">
+                <h2 class="wizard-panel-title" id="step1-heading">
+                  <i class="fa-solid fa-user" aria-hidden="true"></i> Your Details
+                </h2>
+
+                <div class="form-group" id="grp-fullName">
+                  <label for="fullName">Full Name <span class="req-star" aria-hidden="true">*</span></label>
+                  <div class="input-wrap">
+                    <input type="text" id="fullName" name="fullName" autocomplete="name"
+                           aria-required="true" aria-describedby="err-fullName" placeholder="e.g. Jane Smith" />
+                    <i class="fa-solid fa-circle-check field-icon-ok"  aria-hidden="true"></i>
+                    <i class="fa-solid fa-circle-xmark field-icon-err" aria-hidden="true"></i>
+                  </div>
+                  <span class="field-error" id="err-fullName" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group" id="grp-email">
+                  <label for="email">Email Address <span class="req-star" aria-hidden="true">*</span></label>
+                  <div class="input-wrap">
+                    <input type="email" id="email" name="email" autocomplete="email"
+                           aria-required="true" aria-describedby="err-email" placeholder="e.g. jane@example.com" />
+                    <i class="fa-solid fa-circle-check field-icon-ok"  aria-hidden="true"></i>
+                    <i class="fa-solid fa-circle-xmark field-icon-err" aria-hidden="true"></i>
+                  </div>
+                  <span class="field-error" id="err-email" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group" id="grp-phone">
+                  <label for="phone">Phone Number <span class="req-star" aria-hidden="true">*</span></label>
+                  <div class="input-wrap">
+                    <input type="tel" id="phone" name="phone" autocomplete="tel"
+                           aria-required="true" aria-describedby="err-phone" placeholder="e.g. 07700 900000" />
+                    <i class="fa-solid fa-circle-check field-icon-ok"  aria-hidden="true"></i>
+                    <i class="fa-solid fa-circle-xmark field-icon-err" aria-hidden="true"></i>
+                  </div>
+                  <span class="field-error" id="err-phone" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="wizard-nav">
+                  <span></span>
+                  <button type="button" class="btn btn-primary-blue" id="next-1">
+                    Next <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- ═══ STEP 2 — Appointment ═══ -->
+              <div class="wizard-panel" id="step-2" aria-labelledby="step2-heading">
+                <h2 class="wizard-panel-title" id="step2-heading">
+                  <i class="fa-solid fa-calendar-days" aria-hidden="true"></i> Appointment Details
+                </h2>
+
+                <div class="form-group" id="grp-serviceType">
+                  <label for="serviceType">Service Type <span class="req-star" aria-hidden="true">*</span></label>
+                  <div class="input-wrap">
+                    <select id="serviceType" name="serviceType" aria-required="true" aria-describedby="err-serviceType">
+                      <option value="">-- Please Select --</option>
+                      <option value="counseling">Individual Counseling</option>
+                      <option value="group">Group Therapy</option>
+                      <option value="mindfulness">Mindfulness &amp; Meditation</option>
+                      <option value="fitness">Fitness Programs</option>
+                      <option value="nutrition">Nutrition Counseling</option>
+                      <option value="parenting">Parenting Support</option>
+                      <option value="workshop">Life Skills Workshop</option>
+                      <option value="event">Event Registration</option>
+                    </select>
+                    <i class="fa-solid fa-circle-check field-icon-ok"  aria-hidden="true"></i>
+                    <i class="fa-solid fa-circle-xmark field-icon-err" aria-hidden="true"></i>
+                  </div>
+                  <span class="field-error" id="err-serviceType" role="alert" aria-live="polite"></span>
+                </div>
+
+                <!-- Visual Calendar -->
+                <div class="form-group" id="grp-preferredDate">
+                  <label>Preferred Date <span class="req-star" aria-hidden="true">*</span></label>
+                  <span class="field-hint">
+                    <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                    Open Mon–Sat. Past dates and Sundays are unavailable.
+                  </span>
+                  <!-- Hidden input keeps the value for validation -->
+                  <input type="hidden" id="preferredDate" name="preferredDate" aria-required="true" />
+
+                  <div class="cal-wrap" role="application" aria-label="Date picker calendar">
+                    <div class="cal-header">
+                      <button type="button" class="cal-nav" id="cal-prev" aria-label="Previous month">
+                        <i class="fa-solid fa-chevron-left"></i>
+                      </button>
+                      <span class="cal-month-label" id="cal-month-label" aria-live="polite"></span>
+                      <button type="button" class="cal-nav" id="cal-next" aria-label="Next month">
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="cal-days-header" aria-hidden="true">
+                      <span>Su</span><span>Mo</span><span>Tu</span><span>We</span>
+                      <span>Th</span><span>Fr</span><span>Sa</span>
+                    </div>
+                    <div class="cal-grid" id="calGrid" role="grid" aria-label="Calendar dates"></div>
+                  </div>
+                  <span class="field-error" id="err-preferredDate" role="alert" aria-live="polite"></span>
+                </div>
+
+                <!-- Time Slots -->
+                <div class="form-group" id="grp-preferredTime">
+                  <label for="preferredTime">Preferred Time <span class="req-star" aria-hidden="true">*</span></label>
+                  <div class="input-wrap">
+                    <select id="preferredTime" name="preferredTime" aria-required="true"
+                            aria-describedby="err-preferredTime" disabled>
+                      <option value="">-- Choose a date first --</option>
+                    </select>
+                    <i class="fa-solid fa-circle-check field-icon-ok"  aria-hidden="true"></i>
+                    <i class="fa-solid fa-circle-xmark field-icon-err" aria-hidden="true"></i>
+                  </div>
+                  <div class="slot-legend" aria-label="Slot availability legend">
+                    <span class="slot-dot slot-available" aria-hidden="true"></span><span>Available</span>
+                    <span class="slot-dot slot-limited"   aria-hidden="true"></span><span>Limited</span>
+                    <span class="slot-dot slot-full"      aria-hidden="true"></span><span>Full</span>
+                  </div>
+                  <div class="slot-panel" id="slotPanel" aria-label="Available time slots" style="display:none;"></div>
+                  <span class="field-error" id="err-preferredTime" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Additional Information <span class="optional-tag">(optional)</span></label>
+                  <textarea id="message" name="message"
+                    placeholder="Please share any specific needs or questions..."
+                    aria-describedby="hint-message"></textarea>
+                  <span class="field-hint" id="hint-message">
+                    <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                    Any context helps us prepare for your session.
+                  </span>
+                </div>
+
+                <div class="wizard-nav">
+                  <button type="button" class="btn btn-outline-back" id="back-2">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back
+                  </button>
+                  <button type="button" class="btn btn-primary-blue" id="next-2">
+                    Next <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- ═══ STEP 3 — Review & Confirm ═══ -->
+              <div class="wizard-panel" id="step-3" aria-labelledby="step3-heading">
+                <h2 class="wizard-panel-title" id="step3-heading">
+                  <i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Review &amp; Confirm
+                </h2>
+                <p class="wizard-review-intro">Please check your details before submitting.</p>
+
+                <div class="review-card">
+                  <div class="review-section">
+                    <h3><i class="fa-solid fa-user" aria-hidden="true"></i> Your Details</h3>
+                    <div class="review-row"><span>Name</span><strong id="rev-name">—</strong></div>
+                    <div class="review-row"><span>Email</span><strong id="rev-email">—</strong></div>
+                    <div class="review-row"><span>Phone</span><strong id="rev-phone">—</strong></div>
+                  </div>
+                  <div class="review-section">
+                    <h3><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> Appointment</h3>
+                    <div class="review-row"><span>Service</span><strong id="rev-service">—</strong></div>
+                    <div class="review-row"><span>Date</span><strong id="rev-date">—</strong></div>
+                    <div class="review-row"><span>Time</span><strong id="rev-time">—</strong></div>
+                    <div class="review-row" id="rev-notes-row" style="display:none;">
+                      <span>Notes</span><strong id="rev-notes">—</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <label class="review-consent">
+                  <input type="checkbox" id="consentCheck" aria-required="true" />
+                  I confirm the details above are correct and consent to being contacted.
+                </label>
+                <span class="field-error" id="err-consent" role="alert" aria-live="polite"></span>
+
+                <div class="wizard-nav">
+                  <button type="button" class="btn btn-outline-back" id="back-3">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back
+                  </button>
+                  <button type="submit" class="btn btn-primary-blue">
+                    <i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Confirm Booking
+                  </button>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Community Wellbeing Hub</h3>
+            <p>Supporting our community's health and happiness since 2015.</p>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="booking.html">Booking</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <p><i class="fa-solid fa-phone" aria-hidden="true"></i> (555) 123-4567</p>
+            <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> info@wellbeinghub.org</p>
+            <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 123 Community Street</p>
+          </div>
+          <div class="footer-section">
+            <h3>Crisis Support</h3>
+            <p>24/7 Helpline:</p>
+            <p><strong>(555) 999-8888</strong></p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Community Wellbeing Hub. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Feedback Modal -->
+    <div class="feedback-overlay" id="feedbackOverlay">
+      <div class="feedback-modal" role="dialog" aria-modal="true" aria-labelledby="feedbackTitle">
+        <button class="feedback-x" onclick="closeFeedbackModal()" aria-label="Close dialog">&times;</button>
+        <div class="feedback-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"
+               stroke-linecap="round" stroke-linejoin="round" width="38" height="38">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <h2 id="feedbackTitle">Booking confirmed!</h2>
+        <p id="feedbackBody">We'll contact you within 24 hours to confirm your appointment.</p>
+        <div class="feedback-ref-box">
+          <span id="feedbackRefLabel">Booking reference</span>:
+          <strong id="feedbackRef">WH-2026-0000</strong>
+        </div>
+        <div class="feedback-actions">
+          <button class="feedback-close-btn" onclick="closeFeedbackModal()">
+            <i class="fa-solid fa-check" aria-hidden="true"></i> Done
+          </button>
+          <a href="index.html" class="feedback-home-btn">
+            <i class="fa-solid fa-house" aria-hidden="true"></i> Back to home
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="action.js"></script>
+  </body>
+</html>

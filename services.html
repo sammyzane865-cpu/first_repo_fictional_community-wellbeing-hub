@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Community Wellbeing Hub</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+  <body>
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav-brand"><span class="brand-name">Community Wellbeing Hub</span></div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html"    class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link active" aria-current="page">Services</a></li>
+          <li><a href="events.html"   class="nav-link">Events</a></li>
+          <li><a href="booking.html"  class="nav-link">Booking</a></li>
+          <li><a href="contact.html"  class="nav-link">Contact</a></li>
+          <li><a href="news.html"     class="nav-link">News</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="mainContent">
+      <section class="page-section">
+        <div class="container">
+          <div class="page-header">
+            <h1>Our Services</h1>
+            <p>Comprehensive support for your wellbeing journey</p>
+          </div>
+
+          <!-- Accordion Service Directory -->
+          <div class="accordion" id="serviceAccordion">
+
+            <!-- ── Mental Health ─────────────────────────── -->
+            <div class="accordion-item" id="acc-mental">
+              <button class="accordion-header" aria-expanded="true" aria-controls="acc-mental-body">
+                <span class="accordion-icon-wrap">
+                  <i class="fa-solid fa-brain" aria-hidden="true"></i>
+                </span>
+                <span class="accordion-title">Mental Health</span>
+                <span class="accordion-count">3 services</span>
+                <i class="fa-solid fa-chevron-down accordion-chevron" aria-hidden="true"></i>
+              </button>
+              <div class="accordion-body" id="acc-mental-body" role="region" aria-labelledby="acc-mental">
+                <div class="cards-grid">
+                  <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-comments"></i></div>
+                    <h3>Individual Counseling</h3>
+                    <p>One-on-one sessions with licensed therapists specialising in anxiety, depression, trauma, and life transitions. Confidential and personalised care.</p>
+                    <a href="booking.html" class="card-book-btn"><i class="fa-solid fa-calendar-plus"></i> Book Now</a>
+                  </div>
+                  <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-people-group"></i></div>
+                    <h3>Group Therapy</h3>
+                    <p>Connect with others facing similar challenges in a supportive environment. Topics include stress management, grief support, and addiction recovery.</p>
+                    <a href="booking.html" class="card-book-btn"><i class="fa-solid fa-calendar-plus"></i> Book Now</a>
+                  </div>
+                  <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                    <h3>Crisis Helpline</h3>
+                    <p>24/7 support line for anyone experiencing a mental health crisis. Trained counselors available anytime you need immediate help.</p>
+                    <a href="contact.html" class="card-book-btn"><i class="fa-solid fa-phone"></i> Contact Us</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ── Physical Wellbeing ──────────────────────── -->
+            <div class="accordion-item" id="acc-physical">
+              <button class="accordion-header" aria-expanded="false" aria-controls="acc-physical-body">
+                <span class="accordion-icon-wrap">
+                  <i class="fa-solid fa-person-running" aria-hidden="true"></i>
+                </span>
+                <span class="accordion-title">Physical Wellbeing</span>
+                <span class="accordion-count">4 services</span>
+                <i class="fa-solid fa-chevron-down accordion-chevron" aria-hidden="true"></i>
+              </button>
+              <div class="accordion-body accordion-body--closed" id="acc-physical-body" role="region" aria-labelledby="acc-physical">
+                <div class="cards-grid">
+                  <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-spa"></i></div>
+                    <h3>Mindfulness &amp; Meditation</h3>
+                    <p>Learn techniques to reduce stress, improve focus, and enhance emotional wellbeing through guided meditation and mindfulness practices.</p>
+                    <a href="booking.html" class="card-book-btn"><i class="fa-solid fa-calendar-plus"></i> Book Now</a>
+                  </div>
+                  <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-dumbbell"></i></div>
+                    <h3>Fitness Programs</h3>
+                    <p>Yoga, Pilates, walking groups, and fitness classes suitable for all ages and abilities. Improve your physical health in a welcoming atmosphere.</p>
+                    <a href="booking.html" class="card-book-btn"><i class="fa-solid fa-calendar-plus"></i> Book Now</a>
+                  </div>
+                  <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-apple-whole"></i></div>
+                    <h3>Nutrition Counseling</h3>
+                    <p>Work with registered dietitians to develop healthy eating habits, manage chronic conditions, and achieve your wellness goals.</p>
+                    <a href="booking.html" class="card-book-btn"><i class="fa-solid fa-calendar-plus"></i> Book Now</a>
+                  </div>
+                  <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <h3>Community Garden</h3>
+                    <p>Therapeutic gardening programme combining physical activity, nature connection, and social interaction for improved mental health.</p>
+                    <a href="booking.html" class="card-book-btn"><i class="fa-solid fa-calendar-plus"></i> Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ── Family & Community ─────────────────────── -->
+            <div class="accordion-item" id="acc-family">
+              <button class="accordion-header" aria-expanded="false" aria-controls="acc-family-body">
+                <span class="accordion-icon-wrap">
+                  <i class="fa-solid fa-house-chimney-user" aria-hidden="true"></i>
+                </span>
+                <span class="accordion-title">Family &amp; Community</span>
+                <span class="accordion-count">2 services</span>
+                <i class="fa-solid fa-chevron-down accordion-chevron" aria-hidden="true"></i>
+              </button>
+              <div class="accordion-body accordion-body--closed" id="acc-family-body" role="region" aria-labelledby="acc-family">
+                <div class="cards-grid">
+                  <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-baby"></i></div>
+                    <h3>Parenting Support</h3>
+                    <p>Classes and support groups for new parents, single parents, and families navigating the challenges of raising children at any age.</p>
+                    <a href="booking.html" class="card-book-btn"><i class="fa-solid fa-calendar-plus"></i> Book Now</a>
+                  </div>
+                  <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>Life Skills Workshops</h3>
+                    <p>Build confidence and independence with workshops on budgeting, job searching, communication skills, and personal development.</p>
+                    <a href="booking.html" class="card-book-btn"><i class="fa-solid fa-calendar-plus"></i> Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /accordion -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Community Wellbeing Hub</h3>
+            <p>Supporting our community's health and happiness since 2015.</p>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="booking.html">Booking</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <p><i class="fa-solid fa-phone" aria-hidden="true"></i> (555) 123-4567</p>
+            <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> info@wellbeinghub.org</p>
+            <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 123 Community Street</p>
+          </div>
+          <div class="footer-section">
+            <h3>Crisis Support</h3>
+            <p>24/7 Helpline:</p>
+            <p><strong>(555) 999-8888</strong></p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Community Wellbeing Hub. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="action.js"></script>
+  </body>
+</html>

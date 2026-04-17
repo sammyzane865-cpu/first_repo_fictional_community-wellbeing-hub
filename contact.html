@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact – Community Wellbeing Hub</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- WCAG: Skip to main content -->
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav-brand">
+          <span class="brand-name">Community Wellbeing Hub</span>
+        </div>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
+          <li><a href="booking.html" class="nav-link">Booking</a></li>
+          <li>
+            <a href="contact.html" class="nav-link active" aria-current="page"
+              >Contact</a
+            >
+          </li>
+          <li><a href="news.html" class="nav-link">News</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="mainContent">
+      <section class="page-section">
+        <div class="container">
+          <div class="page-header">
+            <h1>Contact Us</h1>
+            <p>We're here to help and answer any questions you may have</p>
+          </div>
+
+          <!-- Contact cards -->
+          <div class="contact-info">
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              </div>
+              <h3>Phone</h3>
+              <p>(555) 123-4567</p>
+              <p>Mon–Fri: 8am – 8pm</p>
+              <p>Sat: 9am – 5pm</p>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </div>
+              <h3>Email</h3>
+              <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="81e8efe7eec1f6e4edede3e4e8efe6e9f4e3afeef3e6">[email&#160;protected]</a></p>
+              <p>We respond within 24 hours</p>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              </div>
+              <h3>Location</h3>
+              <p>123 Community Street</p>
+              <p>Yourtown, ST 12345</p>
+              <p>Free parking available</p>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i
+                  class="fa-solid fa-triangle-exclamation"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <h3>Crisis Line</h3>
+              <p>(555) 999-8888</p>
+              <p>24/7 Support</p>
+              <p>Always available</p>
+            </div>
+          </div>
+
+          <!-- Contact form -->
+          <div class="form-container">
+            <h2 style="margin-bottom: 1.5rem; text-align: center">
+              Send Us a Message
+            </h2>
+            <form id="contactForm" novalidate>
+              <!-- Name -->
+              <div class="form-group" id="grp-contactName">
+                <label for="contactName"
+                  >Your Name
+                  <span class="req-star" aria-hidden="true">*</span></label
+                >
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    id="contactName"
+                    name="contactName"
+                    autocomplete="name"
+                    aria-required="true"
+                    aria-describedby="err-contactName"
+                    placeholder="e.g. Jane Smith"
+                  />
+                  <i
+                    class="fa-solid fa-circle-check field-icon-ok"
+                    aria-hidden="true"
+                  ></i>
+                  <i
+                    class="fa-solid fa-circle-xmark field-icon-err"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <span
+                  class="field-error"
+                  id="err-contactName"
+                  role="alert"
+                  aria-live="polite"
+                ></span>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group" id="grp-contactEmail">
+                <label for="contactEmail"
+                  >Your Email
+                  <span class="req-star" aria-hidden="true">*</span></label
+                >
+                <div class="input-wrap">
+                  <input
+                    type="email"
+                    id="contactEmail"
+                    name="contactEmail"
+                    autocomplete="email"
+                    aria-required="true"
+                    aria-describedby="err-contactEmail"
+                    placeholder="e.g. jane@example.com"
+                  />
+                  <i
+                    class="fa-solid fa-circle-check field-icon-ok"
+                    aria-hidden="true"
+                  ></i>
+                  <i
+                    class="fa-solid fa-circle-xmark field-icon-err"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <span
+                  class="field-error"
+                  id="err-contactEmail"
+                  role="alert"
+                  aria-live="polite"
+                ></span>
+              </div>
+
+              <!-- Subject -->
+              <div class="form-group" id="grp-contactSubject">
+                <label for="contactSubject"
+                  >Subject
+                  <span class="req-star" aria-hidden="true">*</span></label
+                >
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    id="contactSubject"
+                    name="contactSubject"
+                    aria-required="true"
+                    aria-describedby="err-contactSubject"
+                    placeholder="e.g. Question about services"
+                  />
+                  <i
+                    class="fa-solid fa-circle-check field-icon-ok"
+                    aria-hidden="true"
+                  ></i>
+                  <i
+                    class="fa-solid fa-circle-xmark field-icon-err"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <span
+                  class="field-error"
+                  id="err-contactSubject"
+                  role="alert"
+                  aria-live="polite"
+                ></span>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group" id="grp-contactMessage">
+                <label for="contactMessage"
+                  >Message
+                  <span class="req-star" aria-hidden="true">*</span></label
+                >
+                <div class="input-wrap">
+                  <textarea
+                    id="contactMessage"
+                    name="contactMessage"
+                    aria-required="true"
+                    aria-describedby="err-contactMessage hint-contactMessage"
+                    placeholder="How can we help you?"
+                  ></textarea>
+                  <i
+                    class="fa-solid fa-circle-check field-icon-ok"
+                    aria-hidden="true"
+                  ></i>
+                  <i
+                    class="fa-solid fa-circle-xmark field-icon-err"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <span class="field-hint" id="hint-contactMessage">
+                  <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                  Minimum 10 characters. The more detail the better!
+                </span>
+                <span
+                  class="field-error"
+                  id="err-contactMessage"
+                  role="alert"
+                  aria-live="polite"
+                ></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary-blue submit-btn">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Community Wellbeing Hub</h3>
+            <p>Supporting our community's health and happiness since 2015.</p>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="booking.html">Booking</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <p>
+              <i class="fa-solid fa-phone" aria-hidden="true"></i> (555)
+              123-4567
+            </p>
+            <p>
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="325b5c545d7245575e5e50575b5c555a47501c5d4055">[email&#160;protected]</a>
+            </p>
+            <p>
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i> 123
+              Community Street
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Crisis Support</h3>
+            <p>24/7 Helpline:</p>
+            <p><strong>(555) 999-8888</strong></p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Community Wellbeing Hub. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Feedback Modal -->
+    <div class="feedback-overlay" id="feedbackOverlay">
+      <div
+        class="feedback-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="feedbackTitle"
+      >
+        <button
+          class="feedback-x"
+          onclick="closeFeedbackModal()"
+          aria-label="Close dialog"
+        >
+          &times;
+        </button>
+        <div class="feedback-icon" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#059669"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            width="38"
+            height="38"
+          >
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+        </div>
+        <h2 id="feedbackTitle">Message sent!</h2>
+        <p id="feedbackBody">We'll get back to you within 24 hours.</p>
+        <div class="feedback-ref-box">
+          <span id="feedbackRefLabel">Message reference</span>:
+          <strong id="feedbackRef">WH-2026-0000</strong>
+        </div>
+        <div class="feedback-actions">
+          <button class="feedback-close-btn" onclick="closeFeedbackModal()">
+            <i class="fa-solid fa-check" aria-hidden="true"></i> Done
+          </button>
